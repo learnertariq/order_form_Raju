@@ -21,25 +21,45 @@
       <header class="block__header product-prices__header">
         <h2 class="block__heading product-prices__heading">Nazmul Store</h2>
       </header>
-      <ul class="list product-prices__list">
-        <li class="list__item product-prices__item">
-          <table>
-            <tr><td class="product-prices__name">Product Name</td>
-            <td class="product__prices-price"><input type="number"></td></tr>
-          </table>
-        </li>
-      </ul>
+      <table class="product-prices__list">
+        <tr class="product-prices__item">
+          <th class="product-prices__name">Product Name</th>
+          <th class="product-prices__price">Product Prices</th>
+        </tr>
+        <!--  -->
+        <!-- <tr class="product-prices__item">
+          <td class="product-prices__name">${productSelected.text}</td>
+          <td class="product-prices__price"><input class="input input-product" type="number" value="20"></td>
+        </tr> -->
+        <!--  -->
+      </table>
+      <table>
+        <tr>
+          <th class="product-prices__name">Total: </th>
+          <th class="product-prices__total">0</th>
+        </tr>
+      </table>
+      <button class="update-prices-btn">Update Prices</button>
     </div>
-    <!-- <input type="text" list="product-list"> -->
-    <select class="chosen">
-      <option value="home">option 1</option>
-      <option value="dg">option 2</option>
-      <option value="dfg">option 3</option>
+  </section>
+  <section class="block block-product-list">
+    <select class="chosen product-list">
+      <optgroup label="Vaja">
+        <option value="35">Kamranga</option>
+        <option value="42" selected>Mishti bondi</option>
+      </optgroup>
+      <optgroup label="Bekari">
+        <option value="24">nouka cake</option>
+        <option value="28">potol</option>
+      </optgroup>
+      <optgroup label="Thanda">
+        <option value="470">clemon</option>
+      </optgroup>
     </select>
+    <button class="btn product-add-button">Add product</button>
   </section>
 
-  <script type="text/javascript">
-    $(".chosen").chosen();
+  <script type="text/javascript" src="js/main.js">
   </script>
 </body>
 </html>
