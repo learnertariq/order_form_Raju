@@ -23,9 +23,16 @@
       </header>
       <table class="product-prices__list">
         <tr class="product-prices__item">
-          <th class="product-prices__name">Product Name</th>
-          <th class="product-prices__price">Product Prices</th>
+          <th class="product-prices__name">Name</th>
+          <th class="product-prices__price">Prices</th>
+          <th>Remover</th>
         </tr>
+        <tr class="total-prices-row">
+          <th class="product-prices__name">Total: </th>
+          <th class=""><input class="input product-prices__total" type="number" value="0" disabled></th>
+          <td>:)</td>
+        </tr>
+
         <!--  -->
         <!-- <tr class="product-prices__item">
           <td class="product-prices__name">${productSelected.text}</td>
@@ -33,17 +40,11 @@
         </tr> -->
         <!--  -->
       </table>
-      <table>
-        <tr>
-          <th class="product-prices__name">Total: </th>
-          <th class="product-prices__total">0</th>
-        </tr>
-      </table>
-      <button class="update-prices-btn">Update Prices</button>
+      <button class="btn btn--primary btn--small update-prices-btn">Update Prices</button>
     </div>
   </section>
   <section class="block block-product-list">
-    <select class="chosen product-list">
+    <select class="select chosen product-list">
       <optgroup label="Vaja">
         <option value="35">Kamranga</option>
         <option value="42" selected>Mishti bondi</option>
@@ -56,7 +57,7 @@
         <option value="470">clemon</option>
       </optgroup>
     </select>
-    <button class="btn product-add-button">Add product</button>
+    <button class="btn btn--secondary btn--small product-add-button">Add product</button>
   </section>
 
   <script type="text/javascript" src="js/main.js">
