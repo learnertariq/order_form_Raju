@@ -1,66 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.css">
-  <!-- main jquery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- Jquery UI -->
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-  <!-- Chosen -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" integrity="sha512-yVvxUQV0QESBt1SyZbNJMAwyKvFTLMyXSyBHDO4BG5t7k/Lw34tyqlSDlKIrIENIzCl+RVUNjmCPG+V/GMesRw==" crossorigin="anonymous" />
-</head>
-<body>
-  <section class="block block-product-prices">
-    <div class="ptoduct__prices">
-      <header class="block__header product-prices__header">
-        <h2 class="block__heading product-prices__heading">Nazmul Store</h2>
-      </header>
-      <table class="product-prices__list">
-        <tr class="product-prices__item">
-          <th class="product-prices__name">Name</th>
-          <th class="product-prices__price">Prices</th>
-          <th>Remover</th>
-        </tr>
-        <tr class="total-prices-row">
-          <th class="product-prices__name">Total: </th>
-          <th class=""><input class="input product-prices__total" type="number" value="0" disabled></th>
-          <td>:)</td>
-        </tr>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- main jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Jquery UI -->
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Chosen -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css"
+      integrity="sha512-yVvxUQV0QESBt1SyZbNJMAwyKvFTLMyXSyBHDO4BG5t7k/Lw34tyqlSDlKIrIENIzCl+RVUNjmCPG+V/GMesRw=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Section -->
+    <section class="section product">
+      <div class="container">
+        <header class="header product__header">
+          <h1 class="heading product__heading">Nazmul Store</h1>
+        </header>
+        <main class="main">
+          <div class="input-group input-group__shop-name">
+            <label for="shopName">Shop Name and Address</label>
+            <input
+              class="input input--small input--block input--shadow input__shop-name"
+              type="text"
+              id="shopName"
+            />
+          </div>
+          <!-- Section -->
+          <section class="section product__order">
+            <!-- Table -->
+            <table class="table table--block product__order__table">
+              <tr class="product__row-header">
+                <th class="product__name-heading">Name</th>
+                <th class="product__price-heading">Prices</th>
+              </tr>
+              <tr class="product__row-total">
+                <th class="product__name-total">Total:</th>
+                <th class="product__price-total">
+                  <input
+                    class="input"
+                    type="number"
+                    value="0"
+                    disabled
+                  />
+                </th>
+              </tr>
+            </table>
+            <button class="btn btn--primary btn--small product__update-btn">
+              Update Prices
+            </button>
+          </section>
+          <!-- Section -->
+          <section class="section product__select">
+            <!-- Select -->
+            <select name="" id="" class="select chosen product__select-options">
+              <optgroup label="Vaja">
+                <option value="35">Kamranga</option>
+                <option value="42" selected>Mishti bondi</option>
+              </optgroup>
+              <optgroup label="Bekari">
+                <option value="24">nouka cake</option>
+                <option value="28">potol</option>
+              </optgroup>
+              <optgroup label="Thanda">
+                <option value="470">clemon</option>
+              </optgroup>
+            </select>
+            <button class="btn btn--secondary product__select-btn">
+              Add Product
+            </button>
+          </section>
+        </main>
+      </div>
+    </section>
 
-        <!--  -->
-        <!-- <tr class="product-prices__item">
-          <td class="product-prices__name">${productSelected.text}</td>
-          <td class="product-prices__price"><input class="input input-product" type="number" value="20"></td>
-        </tr> -->
-        <!--  -->
-      </table>
-      <button class="btn btn--primary btn--small update-prices-btn">Update Prices</button>
-    </div>
-  </section>
-  <section class="block block-product-list">
-    <select class="select chosen product-list">
-      <optgroup label="Vaja">
-        <option value="35">Kamranga</option>
-        <option value="42" selected>Mishti bondi</option>
-      </optgroup>
-      <optgroup label="Bekari">
-        <option value="24">nouka cake</option>
-        <option value="28">potol</option>
-      </optgroup>
-      <optgroup label="Thanda">
-        <option value="470">clemon</option>
-      </optgroup>
-    </select>
-    <button class="btn btn--secondary btn--small product-add-button">Add product</button>
-  </section>
-
-  <script type="text/javascript" src="js/main.js">
-  </script>
-</body>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
 </html>
